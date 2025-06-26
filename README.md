@@ -1,4 +1,4 @@
-## Card Shuffler: a visual array manipulation
+## Card Shuffler: a visual array manipulator
 
 ### Design
 1. Initial State Bin: this contains the cards in a certain state the user puts it in. 
