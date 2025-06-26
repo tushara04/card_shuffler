@@ -19,6 +19,7 @@ def desired_shuffle():
     return shuff
 
 desired_final_state = desired_shuffle()
+print(f"desired_state: \n{desired_final_state}\n")
 
 def cards_shuff_map():
     # this function tells what card (value) comes to the position (key); e.g. {0:2}. So, the third card in initial state comes to the first position in the desired final state
@@ -31,6 +32,7 @@ def cards_shuff_map():
     return mapping
 
 mapped = cards_shuff_map()
+print(mapped)
 
 def process():
     initial_arrangement = [i for i in range(0, 52)]
