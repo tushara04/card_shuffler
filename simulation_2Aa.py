@@ -1,11 +1,10 @@
 import random
 
 def given_cards():
-
     card_suits = ["spade", "club","diamond", "heart"]
     card_deck = ["ace"] + [str(i) for i in range(2, 11)] + ["jack","queen","king"]
     cards_array = [f"{deck}_{suits}" for deck in card_deck for suits in card_suits]
-    #random.shuffle(cards_array)
+    random.shuffle(cards_array) # since the user might not give a well arranged order of cards
     
     return cards_array
 
@@ -14,7 +13,6 @@ initial_state = given_cards()
 print(f"initial state:\n{initial_state}\n")
 
 def desired_shuffle(): 
-    
     shuff = given_cards()
     random.shuffle(shuff)
     
@@ -24,7 +22,6 @@ desired_final_state = desired_shuffle()
 
 def cards_shuff_map():
     # this function tells what card (value) comes to the position (key); e.g. {0:2}. So, the third card in initial state comes to the first position in the desired final state
-    
     mapping = {}
     for i in range(len(desired_final_state)):
         card = desired_final_state[i]
@@ -36,7 +33,6 @@ def cards_shuff_map():
 mapped = cards_shuff_map()
 
 def process():
-    
     initial_arrangement = [i for i in range(0, 52)]
     
     desired_arrangement = []
@@ -78,9 +74,7 @@ def process():
 
 shuffling = process()
 
-
 def shuffled_cards(): 
- 
     final_state = []
     for i in shuffling:
         final_state.append(initial_state[i])
